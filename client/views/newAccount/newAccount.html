@@ -1,0 +1,37 @@
+<template name="newAccount">
+  {{#if error}}
+    <div class="alert alert-danger">{{error}}</div>
+  {{/if}}
+  <form class="form-horizontal" role="form" >
+    <div class="form-group">
+      <label for="inputEmail" class="col-sm-2 control-label">email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail" placeholder="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-sm-2 control-label">password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="password">
+      </div>
+    </div>
+    {{#if createUser}}
+      <div class="form-group">
+        <label for="inputUsername" class="col-sm-2 control-label">username</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputUsername" placeholder="username">
+        </div>
+      </div>
+    {{/if}}
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">go</button>
+        {{#if createUser}}
+          <button type="button" id="btnLogin" class="btn btn-default">login</button>
+        {{else}}
+          <button type="button" id="btnCreateAccount" class="btn btn-default">create account</button>
+        {{/if}}
+      </div>
+    </div>
+  </form>
+</template>

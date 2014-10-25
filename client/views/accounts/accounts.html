@@ -1,0 +1,8 @@
+<template name="accounts">
+  {{#if currentUser}}
+    {{> profile}}
+  {{else}}
+    {{> newAccount}}
+  {{/if}}
+</template>
+
